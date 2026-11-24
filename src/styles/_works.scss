@@ -1,0 +1,678 @@
+@use './variables' as v;
+
+// ==================================================
+// 共通：セクション・タブ・グリッド
+// ==================================================
+
+.works {
+	padding: 80px 24px;
+	background-color: v.$color-bg;
+	color: v.$color-text;
+	scroll-margin-top: 24px;
+
+	&__inner {
+		max-width: 1100px;
+		margin-inline: auto;
+	}
+
+	&__header {
+		margin-bottom: 40px;
+
+		p {
+			margin-top: 8px;
+			font-size: 14px;
+		}
+	}
+
+	&__title {
+		font-size: clamp(36px, 5vw, 56px);
+		font-weight: 500;
+		line-height: 1.2;
+		letter-spacing: -0.03em;
+	}
+
+	&__tabs {
+		display: flex;
+		border-bottom: 1px solid rgba(v.$color-text, 0.2);
+	}
+
+	&__tab {
+		flex: 1;
+		position: relative;
+		min-height: 56px;
+		padding: 16px 12px;
+		border: 0;
+		background: transparent;
+		color: v.$color-text;
+		font: inherit;
+		font-weight: 600;
+		cursor: pointer;
+		transition:
+			color 180ms ease,
+			background-color 180ms ease;
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: -1px;
+			left: 0;
+			height: 3px;
+			background-color: v.$color-accent;
+			transform: scaleX(0);
+			transition: transform 180ms ease;
+		}
+
+		&[aria-selected='true'] {
+			color: v.$color-accent;
+
+			&::after {
+				transform: scaleX(1);
+			}
+		}
+
+		&:focus-visible {
+			z-index: 1;
+			outline: 2px solid v.$color-accent;
+			outline-offset: -4px;
+		}
+	}
+
+	&__panel {
+		padding-top: 32px;
+		scroll-margin-top: 24px;
+
+		&[hidden] {
+			display: none;
+		}
+
+		&:focus-visible {
+			outline: 2px solid v.$color-accent;
+			outline-offset: 6px;
+		}
+	}
+
+	&__grid {
+		display: grid;
+		gap: 32px;
+
+		&--two {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+}
+
+@media (hover: hover) {
+	.works__tab:hover {
+		background-color: rgba(v.$color-accent, 0.05);
+		color: v.$color-accent;
+	}
+}
+
+@media (max-width: 767px) {
+	.works {
+		padding: 56px 20px;
+
+		&__tab {
+			padding-inline: 6px;
+			font-size: 13px;
+		}
+
+		&__grid--two {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.works__tab,
+	.works__tab::after {
+		transition: none;
+	}
+}
+
+.works__panel {
+	min-width: 0;
+}
+
+// ==================================================
+// 共通：作品カード・拡大リンク
+// ==================================================
+
+.project {
+	min-width: 0;
+	overflow: hidden;
+	border: 1px solid rgba(v.$color-text, 0.15);
+	border-radius: 6px;
+	background-color: #fff;
+
+	&__placeholder {
+		display: grid;
+		place-items: center;
+		aspect-ratio: 16 / 9;
+		background-color: #eae4db;
+		font-size: clamp(24px, 4vw, 40px);
+		letter-spacing: -0.03em;
+
+		&--banner {
+			aspect-ratio: 2 / 1;
+			background-color: #f0dccd;
+		}
+
+		&--poster {
+			aspect-ratio: 3 / 4;
+			background-color: #ddd5c8;
+		}
+	}
+
+	&__image {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	&__body {
+		padding: clamp(20px, 3vw, 32px);
+	}
+
+	&__title {
+		font-size: clamp(20px, 2.5vw, 26px);
+		line-height: 1.5;
+	}
+
+	&__intro {
+		margin-top: 12px;
+		font-size: 14px;
+		line-height: 1.9;
+	}
+
+	&__tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin: 16px 0 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			padding: 4px 12px;
+			border: 1px solid rgba(v.$color-accent, 0.25);
+			border-radius: 999px;
+			background-color: rgba(v.$color-accent, 0.06);
+			font-size: 12px;
+		}
+	}
+
+	&__details {
+		margin: 24px 0 0;
+		font-size: 14px;
+
+		>div {
+			display: grid;
+			grid-template-columns: 88px minmax(0, 1fr);
+			gap: 16px;
+			padding-block: 16px;
+			border-top: 1px solid rgba(v.$color-text, 0.12);
+		}
+
+		dt {
+			font-weight: 600;
+		}
+
+		dd {
+			margin: 0;
+			line-height: 1.9;
+			overflow-wrap: anywhere;
+		}
+	}
+
+	&__zoom {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		background-color: #eae4db;
+		color: #fff;
+		cursor: zoom-in;
+
+		&:focus-visible {
+			outline: 3px solid v.$color-accent;
+			outline-offset: -3px;
+		}
+	}
+
+	&__thumbnail {
+		display: block;
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+		object-position: top;
+		transition: transform 240ms ease;
+	}
+
+	&__zoom-label {
+		position: absolute;
+		right: 16px;
+		bottom: 16px;
+		padding: 8px 14px;
+		border-radius: 999px;
+		background-color: rgba(v.$color-text, 0.9);
+		font-size: 13px;
+		pointer-events: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.project__details>div {
+		grid-template-columns: 1fr;
+		gap: 6px;
+	}
+}
+
+@media (hover: hover) {
+	.project__zoom:hover .project__thumbnail {
+		transform: scale(1.025);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.project__thumbnail {
+		transition: none;
+	}
+
+	.project__zoom:hover .project__thumbnail {
+		transform: none;
+	}
+}
+
+// ==================================================
+// 共通：スライダー・左右の矢印・ページ数
+// ==================================================
+
+.works-carousel {
+	min-width: 0;
+
+	&__controls {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 24px;
+		/* 矢印の位置基準をworks-carouselにする*/
+		position: static;
+		margin-top: 24px;
+	}
+
+	&__prev,
+	&__next {
+		display: grid;
+		place-items: center;
+		flex: 0 0 44px;
+		padding: 0;
+		border: 1px solid rgba(v.$color-text, 0.25);
+		border-radius: 50%;
+		color: v.$color-text;
+		font-size: 20px;
+		cursor: pointer;
+		transition:
+			background-color 180ms ease,
+			color 180ms ease;
+
+		&:disabled {
+			opacity: 0.3;
+			cursor: default;
+		}
+
+		&:focus-visible {
+			outline: 2px solid v.$color-accent;
+			outline-offset: 4px;
+		}
+
+		position: absolute;
+		top: calc((100% - 48px) / 2);
+		z-index: 5;
+		transform: translateY(-50%);
+
+		width: 48px;
+		height: 48px;
+		background-color: #fff;
+		border-color: rgba(v.$color-text, 0.15);
+		box-shadow: 0 4px 16px rgba(v.$color-text, 0.12);
+	}
+
+	&__pagination {
+		width: auto;
+		min-width: 64px;
+		text-align: center;
+		font-size: 14px;
+		font-variant-numeric: tabular-nums;
+		min-height: 24px;
+		line-height: 24px;
+	}
+
+	/* 作品が1件の場合は操作ボタンを非表示*/
+	&.is-single &__controls {
+		display: none;
+	}
+
+	position: relative;
+
+	&__prev {
+		left: 8px;
+	}
+
+	&__next {
+		right: 8px;
+	}
+}
+
+.works-slider {
+	overflow: hidden;
+	padding-block: 6px;
+
+	.swiper-slide {
+		height: auto;
+		box-sizing: border-box;
+	}
+
+	.project {
+		width: 100%;
+	}
+
+	/* 短い作品に切り替えたとき、下に余白を残さない*/
+	.swiper-wrapper {
+		align-items: flex-start;
+	}
+}
+
+@media (hover: hover) {
+
+	.works-carousel__prev:hover:not(:disabled),
+	.works-carousel__next:hover:not(:disabled) {
+		background-color: v.$color-text;
+		color: #fff;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.works-carousel__prev,
+	.works-carousel__next {
+		transition: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.works-carousel {
+
+		&__prev,
+		&__next {
+			width: 44px;
+			height: 44px;
+		}
+
+		&__prev {
+			left: 0;
+		}
+
+		&__next {
+			right: 0;
+		}
+	}
+}
+
+// ==================================================
+// Webサイト・LP：制作テーマの説明
+// ==================================================
+.works {
+	.works-intro {
+		max-width: 820px;
+		margin: 0 auto 32px;
+		padding: 8px 0 24px;
+		border-bottom: 1px solid rgba(v.$color-text, 0.15);
+
+		&__label {
+			display: inline-block;
+			margin-bottom: 16px;
+			padding: 5px 12px;
+			border: 1px solid rgba(v.$color-accent, 0.25);
+			border-radius: 999px;
+			background-color: rgba(v.$color-accent, 0.05);
+			color: v.$color-accent;
+			font-size: 12px;
+			font-weight: 600;
+			letter-spacing: 0.04em;
+		}
+
+		&__title {
+			margin: 0;
+			font-size: clamp(20px, 2.4vw, 28px);
+			font-weight: 600;
+			line-height: 1.6;
+			overflow-wrap: anywhere;
+		}
+
+		&__text {
+			margin-top: 16px;
+			font-size: 15px;
+			line-height: 2;
+			overflow-wrap: anywhere;
+		}
+
+		&__guide {
+			display: flex;
+			align-items: baseline;
+			gap: 8px;
+			margin-top: 20px;
+			font-size: 13px;
+			line-height: 1.7;
+
+			span {
+				flex-shrink: 0;
+				color: v.$color-accent;
+			}
+		}
+	}
+
+	@media (max-width: 767px) {
+		.works-intro {
+			margin-bottom: 24px;
+
+			&__text {
+				font-size: 14px;
+				line-height: 1.9;
+			}
+		}
+	}
+}
+
+// ==================================================
+// バナー：メイン画像・サイズ展開
+// ==================================================
+
+.banner-gallery {
+	&__main {
+		display: grid;
+		place-items: center;
+		aspect-ratio: 750 / 394;
+		padding: 16px;
+		background-color: #eeeae4;
+
+		img {
+			display: block;
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__variations {
+		padding: 24px;
+		border-bottom: 1px solid rgba(v.$color-text, 0.12);
+	}
+
+	&__heading {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 8px 16px;
+		margin-bottom: 16px;
+		font-size: 14px;
+		font-weight: 600;
+
+		span {
+			font-size: 12px;
+			font-weight: 400;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+		gap: 16px;
+	}
+
+	&__item {
+		display: block;
+		min-width: 0;
+		overflow: hidden;
+		border: 1px solid rgba(v.$color-text, 0.15);
+		border-radius: 4px;
+		color: v.$color-text;
+		text-decoration: none;
+		cursor: zoom-in;
+		transition: border-color 180ms ease;
+
+		&:focus-visible {
+			outline: 3px solid v.$color-accent;
+			outline-offset: 3px;
+		}
+	}
+
+	&__preview {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 160px;
+		padding: 12px;
+		background-color: #f5f2ed;
+
+		img {
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__size {
+		display: flex;
+		justify-content: space-between;
+		gap: 8px;
+		padding: 10px 12px;
+		font-size: 12px;
+
+		span {
+			color: v.$color-accent;
+		}
+	}
+}
+
+@media (hover: hover) {
+	.banner-gallery__item:hover {
+		border-color: v.$color-accent;
+	}
+}
+
+@media (max-width: 767px) {
+	.banner-gallery {
+		&__main {
+			padding: 8px;
+		}
+
+		&__variations {
+			padding: 16px;
+		}
+
+		&__list {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 12px;
+		}
+
+		&__preview {
+			height: 120px;
+			padding: 8px;
+		}
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.banner-gallery__item {
+		transition: none;
+	}
+}
+
+// ==================================================
+// ポスター：縦長画像・2作品表示
+// ==================================================
+
+.poster-preview {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: clamp(320px, 50vw, 560px);
+	padding: 24px;
+	background-color: #eeeae4;
+
+	img {
+		display: block;
+		flex-shrink: 0;
+		width: auto;
+		height: auto;
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+		box-shadow: 0 6px 20px rgba(v.$color-text, 0.12);
+	}
+}
+
+#works-poster {
+	.poster-preview {
+		height: 420px;
+		padding: 20px;
+	}
+
+	.project__body {
+		padding: 24px;
+	}
+
+	.project__title {
+		font-size: 22px;
+	}
+
+	/* 2列でも説明を読みやすくする*/
+	.project__details>div {
+		grid-template-columns: 1fr;
+		gap: 6px;
+	}
+}
+
+@media (max-width: 767px) {
+	#works-poster {
+		.poster-preview {
+			height: 360px;
+			padding: 16px;
+		}
+
+		.project__body {
+			padding: 20px;
+		}
+	}
+
+	.poster-preview {
+		height: 380px;
+		padding: 16px;
+	}
+}

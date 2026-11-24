@@ -1,7 +1,15 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+@use './reset';
+@use './variables' as v;
+@use './mv';
+@use './works';
+@use './about';
+
+// これ以降に共通スタイルを記述
+body {
+  background-color: v.$color-bg;
+  color: v.$color-text;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
 }
 
 body {

@@ -11,5 +11,10 @@
   "devDependencies": {
     "sass": "^1.108.2",
     "vite": "^8.3.6"
+  },
+  "dependencies": {
+    "jquery": "^4.1.0",
+    "photoswipe": "^5.4.4",
+    "swiper": "^14.4.0"
   }
 }
