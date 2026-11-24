@@ -25,10 +25,12 @@
 	}
 
 	&__title {
-		font-size: clamp(36px, 5vw, 56px);
-		font-weight: 500;
-		line-height: 1.2;
-		letter-spacing: -0.03em;
+		display: block;
+        font-family: 'Bungee', sans-serif;
+        font-size: clamp(40px, 5.5vw, 76px);
+        font-weight: 400;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
 	}
 
 	&__tabs {
@@ -418,6 +420,36 @@
 			right: 0;
 		}
 	}
+}
+
+// 左右の作品を見せるための表示範囲
+.works-carousel__viewport {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+// Web・バナーだけ、スライダー本体の幅を縮める
+#works-web,
+#works-banner {
+  .works-carousel:not(.is-single) {
+    .works-slider {
+      width: 82%;
+      margin-inline: auto;
+      overflow: visible;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #works-web,
+  #works-banner {
+    .works-carousel:not(.is-single) {
+      .works-slider {
+        width: 90%;
+      }
+    }
+  }
 }
 
 // ==================================================

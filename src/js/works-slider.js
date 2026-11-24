@@ -19,6 +19,7 @@ document.querySelectorAll('.works__panel').forEach((panel) => {
     const isPoster = panel.id === 'works-poster';
 
     carousel.classList.toggle('is-single', single);
+    carousel.classList.toggle('is-poster', isPoster);
 
     let swiper;
 
@@ -41,6 +42,7 @@ document.querySelectorAll('.works__panel').forEach((panel) => {
 
         if (swiper) {
             swiper.update();
+            if (!isPoster && swiper.params.loop) swiper.loopFix();
             swiper.updateAutoHeight(0);
             return;
         }
@@ -48,23 +50,20 @@ document.querySelectorAll('.works__panel').forEach((panel) => {
         swiper = new Swiper(slider, {
             modules: [Navigation, Pagination, A11y],
 
-            // スマートフォン：1作品＋隣を少し表示
-            slidesPerView: single ? 1 : 1.1,
-
-            // ポスターは左揃え、Web・バナーは中央揃え
+            slidesPerView: 1,
             centeredSlides: !isPoster,
-
             slidesPerGroup: 1,
-            spaceBetween: 24,
+            // スマートフォンでも隣の作品が見える間隔にする
+            spaceBetween: 8,
 
             loop: slides.length >= 3,
 
             breakpoints: {
                 768: {
-                    // PC：ポスターは2作品、その他は従来どおり
+                    spaceBetween: 24,
                     slidesPerView: isPoster
                     ? Math.min(2, slides.length)
-                    : single ? 1 : 1.2,
+                    : 1,
                 },
             },
             autoHeight: true,
@@ -102,7 +101,13 @@ document.querySelectorAll('.works__panel').forEach((panel) => {
                 loopFix: syncActiveSlide,
                 slidesUpdated: syncActiveSlide,
                 setTranslate: syncActiveSlide,
-                transitionEnd: syncActiveSlide,
+                transitionEnd(instance) {
+                    // CSSで見せている左右の作品も、移動完了後に補充する。
+                    if (!isPoster && instance.params.loop) {
+                        instance.loopFix();
+                    }
+                    syncActiveSlide(instance);
+                },
             },
         });
     }

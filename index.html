@@ -12,14 +12,26 @@
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="site-header__logo" href="#top" aria-label="ページの先頭へ">
+                Kei Igarashi<span aria-hidden="true">.</span>
+            </a>
+
+            <nav class="site-header__nav" aria-label="メインナビゲーション">
+                <a class="site-header__link" href="#works">Works</a>
+                <a class="site-header__link" href="#about">About</a>
+            </nav>
+        </div>
+    </header>
     <main>
-        <section class="mv" aria-labelledby="mv-title">
+        <section class="mv" id="top" aria-labelledby="mv-title">
             <div class="mv__inner">
                 <div class="mv__content">
                     <p class="mv__eyebrow">UI/UX Designer</p>
 
                     <h1 class="mv__title" id="mv-title">
-                        <span class="mv__name">Kei<br>Igarashi</span>
+                        <span class="mv__name">Kei<br>Igarashi<span class="point" aria-hidden="true">.</span></span>
                         <span class="mv__portfolio">Portfolio</span>
                     </h1>
 
@@ -115,149 +127,155 @@
                     </div>
 
                     <div class="works-carousel">
-                        <div class="swiper works-slider" aria-label="Webサイト・LPの制作事例">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <article class="project">
-                                        <a class="project__zoom" href="%BASE_URL%images/works/web_01_full.png"
-                                            data-pswp-width="2880" data-pswp-height="5956" aria-label="作品の全体画像を拡大する">
-                                            <img class="project__thumbnail" src="/images/works/web_01.png"
-                                                alt="GrowUpStudio" width="2880" height="1504" />
-                                            <span class="project__zoom-label" aria-hidden="true">
-                                                全体を見る ↗
-                                            </span>
-                                        </a>
+                        <div class="works-carousel__viewport">
 
-                                        <div class="project__body">
-                                            <h3 class="project__title">GrowUpStudio</h3>
-                                            <p class="project__intro">
-                                                「AI」や「最先端」という言葉に惹かれる、ロジカルで効率重視の層へ向けたデザイン。
-                                            </p>
+                            <div class="swiper works-slider" aria-label="Webサイト・LPの制作事例">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <article class="project">
+                                            <a class="project__zoom" href="%BASE_URL%images/works/web_01_full.png"
+                                                data-pswp-width="2880" data-pswp-height="5956"
+                                                aria-label="作品の全体画像を拡大する">
+                                                <img class="project__thumbnail" src="/images/works/web_01.png"
+                                                    alt="GrowUpStudio" width="2880" height="1504" />
+                                                <span class="project__zoom-label" aria-hidden="true">
+                                                    全体を見る ↗
+                                                </span>
+                                            </a>
 
-                                            <ul class="project__tags" aria-label="担当業務">
-                                                <li>Webデザイン</li>
-                                                <li>LP</li>
-                                            </ul>
+                                            <div class="project__body">
+                                                <h3 class="project__title">GrowUpStudio</h3>
+                                                <p class="project__intro">
+                                                    「AI」や「最先端」という言葉に惹かれる、ロジカルで効率重視の層へ向けたデザイン。
+                                                </p>
 
-                                            <dl class="project__details">
-                                                <div>
-                                                    <dt>目的・課題</dt>
-                                                    <dd> 20代〜30代の男女。<br>
-                                                        「これからはAIを使いこなすデザイナーの時代だ」「効率的に最新のスキルをハックしたい」と考える効率・論理重視派。
-                                                    </dd>
-                                                </div>
-                                                <div>
-                                                    <dt>キャッチコピー案</dt>
-                                                    <dd> 「AI×デザイン。次世代のクリエイターへ最速で進化する」</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>工夫した点</dt>
-                                                    <dd>あえて「AIらしさ」を取り入れたデザインを採用し、実際にAIに対して魅力を感じているユーザーに語り掛けることを意識しました。
-                                                    </dd>
-                                                </div>
-                                            </dl>
-                                        </div>
-                                    </article>
+                                                <ul class="project__tags" aria-label="担当業務">
+                                                    <li>Webデザイン</li>
+                                                    <li>LP</li>
+                                                </ul>
+
+                                                <dl class="project__details">
+                                                    <div>
+                                                        <dt>目的・課題</dt>
+                                                        <dd> 20代〜30代の男女。<br>
+                                                            「これからはAIを使いこなすデザイナーの時代だ」「効率的に最新のスキルをハックしたい」と考える効率・論理重視派。
+                                                        </dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>キャッチコピー案</dt>
+                                                        <dd> 「AI×デザイン。次世代のクリエイターへ最速で進化する」</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>工夫した点</dt>
+                                                        <dd>あえて「AIらしさ」を取り入れたデザインを採用し、実際にAIに対して魅力を感じているユーザーに語り掛けることを意識しました。
+                                                        </dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <article class="project">
+                                            <a class="project__zoom" href="%BASE_URL%images/works/web_02_full.png"
+                                                data-pswp-width="2880" data-pswp-height="5868"
+                                                aria-label="作品の全体画像を拡大する">
+                                                <img class="project__thumbnail" src="/images/works/web_02.png"
+                                                    alt="デジ★キラル" width="2880" height="1409" />
+                                                <span class="project__zoom-label" aria-hidden="true">
+                                                    全体を見る ↗
+                                                </span>
+                                            </a>
+
+                                            <div class="project__body">
+                                                <h3 class="project__title">デジ★キラル</h3>
+                                                <p class="project__intro">
+                                                    一歩踏み出したい人の背中を押し、ワクワク感を刺激するデザイン。
+                                                </p>
+
+                                                <ul class="project__tags" aria-label="担当業務">
+                                                    <li>Webデザイン</li>
+                                                    <li>LP</li>
+                                                </ul>
+
+                                                <dl class="project__details">
+                                                    <div>
+                                                        <dt>目的・課題</dt>
+                                                        <dd>20代前半〜半ばの女性がペルソナ。<br>
+                                                            「今の仕事のままでいいのかな…」「もっと自分らしく、楽しく働きたい！」と現状にモヤモヤしている未経験者が対象。</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>キャッチコピー案</dt>
+                                                        <dd>「未経験から3ヶ月で、"好き"を仕事にする私になる！」</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>工夫した点</dt>
+                                                        <dd>ビビットなカラーを使用し、親しみやすさを与えることで「自分でもできそう」と思え、安心感を与えられるよう意識しました。
+                                                        </dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <article class="project">
+                                            <a class="project__zoom" href="%BASE_URL%images/works/web_03_full.png"
+                                                data-pswp-width="2880" data-pswp-height="6228"
+                                                aria-label="作品の全体画像を拡大する">
+                                                <img class="project__thumbnail" src="/images/works/web_03.png"
+                                                    alt="匠デザイン塾" width="2880" height="1511" />
+                                                <span class="project__zoom-label" aria-hidden="true">
+                                                    全体を見る ↗
+                                                </span>
+                                            </a>
+
+                                            <div class="project__body">
+                                                <h3 class="project__title">匠デザイン塾</h3>
+                                                <p class="project__intro">
+                                                    本格的なスキルアップと、洗練された働き方に憧れる層へ向けたデザイン。
+                                                </p>
+
+                                                <ul class="project__tags" aria-label="担当業務">
+                                                    <li>Webデザイン</li>
+                                                    <li>LP</li>
+                                                </ul>
+
+                                                <dl class="project__details">
+                                                    <div>
+                                                        <dt>目的・課題</dt>
+                                                        <dd>20代後半〜30代の男性。<br>
+                                                            「在宅ワークで自立したい」「副業で月10万円を確実に稼げる強みがほしい」と、キャリアチェンジを見据える人を対象。
+                                                        </dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>キャッチコピー案</dt>
+                                                        <dd>「場所に縛られない、確かなスキルを。実践型WEBデザイン講座」</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>工夫した点</dt>
+                                                        <dd>大人なネイビー、明朝体を基本としてビジネス感を強めに出して「しっかりとした」印象を与えることを前提として制作しました。
+                                                        </dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </article>
+                                    </div>
+
                                 </div>
-
-                                <div class="swiper-slide">
-                                    <article class="project">
-                                        <a class="project__zoom" href="%BASE_URL%images/works/web_02_full.png"
-                                            data-pswp-width="2880" data-pswp-height="5868" aria-label="作品の全体画像を拡大する">
-                                            <img class="project__thumbnail" src="/images/works/web_02.png" alt="デジ★キラル"
-                                                width="2880" height="1409" />
-                                            <span class="project__zoom-label" aria-hidden="true">
-                                                全体を見る ↗
-                                            </span>
-                                        </a>
-
-                                        <div class="project__body">
-                                            <h3 class="project__title">デジ★キラル</h3>
-                                            <p class="project__intro">
-                                                一歩踏み出したい人の背中を押し、ワクワク感を刺激するデザイン。
-                                            </p>
-
-                                            <ul class="project__tags" aria-label="担当業務">
-                                                <li>Webデザイン</li>
-                                                <li>LP</li>
-                                            </ul>
-
-                                            <dl class="project__details">
-                                                <div>
-                                                    <dt>目的・課題</dt>
-                                                    <dd>20代前半〜半ばの女性がペルソナ。<br>
-                                                        「今の仕事のままでいいのかな…」「もっと自分らしく、楽しく働きたい！」と現状にモヤモヤしている未経験者が対象。</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>キャッチコピー案</dt>
-                                                    <dd>「未経験から3ヶ月で、"好き"を仕事にする私になる！」</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>工夫した点</dt>
-                                                    <dd>ビビットなカラーを使用し、親しみやすさを与えることで「自分でもできそう」と思え、安心感を与えられるよう意識しました。
-                                                    </dd>
-                                                </div>
-                                            </dl>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <article class="project">
-                                        <a class="project__zoom" href="%BASE_URL%images/works/web_03_full.png"
-                                            data-pswp-width="2880" data-pswp-height="6228" aria-label="作品の全体画像を拡大する">
-                                            <img class="project__thumbnail" src="/images/works/web_03.png" alt="匠デザイン塾"
-                                                width="2880" height="1511" />
-                                            <span class="project__zoom-label" aria-hidden="true">
-                                                全体を見る ↗
-                                            </span>
-                                        </a>
-
-                                        <div class="project__body">
-                                            <h3 class="project__title">匠デザイン塾</h3>
-                                            <p class="project__intro">
-                                                本格的なスキルアップと、洗練された働き方に憧れる層へ向けたデザイン。
-                                            </p>
-
-                                            <ul class="project__tags" aria-label="担当業務">
-                                                <li>Webデザイン</li>
-                                                <li>LP</li>
-                                            </ul>
-
-                                            <dl class="project__details">
-                                                <div>
-                                                    <dt>目的・課題</dt>
-                                                    <dd>20代後半〜30代の男性。<br>
-                                                        「在宅ワークで自立したい」「副業で月10万円を確実に稼げる強みがほしい」と、キャリアチェンジを見据える人を対象。
-                                                    </dd>
-                                                </div>
-                                                <div>
-                                                    <dt>キャッチコピー案</dt>
-                                                    <dd>「場所に縛られない、確かなスキルを。実践型WEBデザイン講座」</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>工夫した点</dt>
-                                                    <dd>大人なネイビー、明朝体を基本としてビジネス感を強めに出して「しっかりとした」印象を与えることを前提として制作しました。
-                                                    </dd>
-                                                </div>
-                                            </dl>
-                                        </div>
-                                    </article>
-                                </div>
-
                             </div>
-                        </div>
 
-                        <div class="works-carousel__controls">
-                            <button class="works-carousel__prev" type="button" aria-label="前の作品">
-                                ←
-                            </button>
+                            <div class="works-carousel__controls">
+                                <button class="works-carousel__prev" type="button" aria-label="前の作品">
+                                    ←
+                                </button>
 
-                            <div class="works-carousel__pagination"></div>
+                                <div class="works-carousel__pagination"></div>
 
-                            <button class="works-carousel__next" type="button" aria-label="次の作品">
-                                →
-                            </button>
+                                <button class="works-carousel__next" type="button" aria-label="次の作品">
+                                    →
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -266,319 +284,321 @@
                     hidden>
 
                     <div class="works-carousel">
-                        <div class="swiper works-slider" aria-label="バナーの制作事例">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <article class="project project--banner">
+                        <div class="works-carousel__viewport">
+                            <div class="swiper works-slider" aria-label="バナーの制作事例">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <article class="project project--banner">
 
-                                        <div class="banner-gallery">
+                                            <div class="banner-gallery">
 
-                                            <!-- メインサイズ -->
-                                            <a class="project__zoom banner-gallery__main"
-                                                href="%BASE_URL%images/works/banner_01.jpg" data-pswp-width="750"
-                                                data-pswp-height="394" aria-label="バナー案件1の750×394画像を拡大">
-                                                <img src="/images/works/banner_01.jpg" alt="バナー案件1のメインデザイン" width="750"
-                                                    height="394" loading="lazy" />
+                                                <!-- メインサイズ -->
+                                                <a class="project__zoom banner-gallery__main"
+                                                    href="%BASE_URL%images/works/banner_01.jpg" data-pswp-width="750"
+                                                    data-pswp-height="394" aria-label="バナー案件1の750×394画像を拡大">
+                                                    <img src="/images/works/banner_01.jpg" alt="バナー案件1のメインデザイン"
+                                                        width="750" height="394" loading="lazy" />
 
-                                                <span class="project__zoom-label" aria-hidden="true">
-                                                    拡大する ↗
-                                                </span>
-                                            </a>
+                                                    <span class="project__zoom-label" aria-hidden="true">
+                                                        拡大する ↗
+                                                    </span>
+                                                </a>
 
-                                            <!-- サイズ展開 -->
-                                            <div class="banner-gallery__variations">
-                                                <p class="banner-gallery__heading">
-                                                    サイズ展開
-                                                    <span>クリックで拡大</span>
-                                                </p>
+                                                <!-- サイズ展開 -->
+                                                <div class="banner-gallery__variations">
+                                                    <p class="banner-gallery__heading">
+                                                        サイズ展開
+                                                        <span>クリックで拡大</span>
+                                                    </p>
 
-                                                <div class="banner-gallery__list">
-                                                    <a class="banner-gallery__item"
-                                                        href="%BASE_URL%images/works/banner_01_line.jpg"
-                                                        data-pswp-width="1040" data-pswp-height="1040"
-                                                        aria-label="バナー案件1の1040x1040画像を拡大">
-                                                        <span class="banner-gallery__preview">
-                                                            <img src="/images/works/banner_01_line.jpg" alt=""
-                                                                width="1040" height="1040" loading="lazy" />
-                                                        </span>
+                                                    <div class="banner-gallery__list">
+                                                        <a class="banner-gallery__item"
+                                                            href="%BASE_URL%images/works/banner_01_line.jpg"
+                                                            data-pswp-width="1040" data-pswp-height="1040"
+                                                            aria-label="バナー案件1の1040x1040画像を拡大">
+                                                            <span class="banner-gallery__preview">
+                                                                <img src="/images/works/banner_01_line.jpg" alt=""
+                                                                    width="1040" height="1040" loading="lazy" />
+                                                            </span>
 
-                                                        <span class="banner-gallery__size">
-                                                            1040 × 1040
-                                                            <span aria-hidden="true">↗</span>
-                                                        </span>
-                                                    </a>
+                                                            <span class="banner-gallery__size">
+                                                                1040 × 1040
+                                                                <span aria-hidden="true">↗</span>
+                                                            </span>
+                                                        </a>
 
-                                                    <a class="banner-gallery__item"
-                                                        href="%BASE_URL%images/works/banner_01_mini.jpg"
-                                                        data-pswp-width="600" data-pswp-height="166"
-                                                        aria-label="バナー案件1の600×166画像を拡大">
-                                                        <span class="banner-gallery__preview">
-                                                            <img src="/images/works/banner_01_mini.jpg" alt=""
-                                                                width="600" height="166" loading="lazy" />
-                                                        </span>
+                                                        <a class="banner-gallery__item"
+                                                            href="%BASE_URL%images/works/banner_01_mini.jpg"
+                                                            data-pswp-width="600" data-pswp-height="166"
+                                                            aria-label="バナー案件1の600×166画像を拡大">
+                                                            <span class="banner-gallery__preview">
+                                                                <img src="/images/works/banner_01_mini.jpg" alt=""
+                                                                    width="600" height="166" loading="lazy" />
+                                                            </span>
 
-                                                        <span class="banner-gallery__size">
-                                                            600 × 166
-                                                            <span aria-hidden="true">↗</span>
-                                                        </span>
-                                                    </a>
+                                                            <span class="banner-gallery__size">
+                                                                600 × 166
+                                                                <span aria-hidden="true">↗</span>
+                                                            </span>
+                                                        </a>
 
-                                                    <a class="banner-gallery__item"
-                                                        href="%BASE_URL%images/works/banner_01_top.jpg"
-                                                        data-pswp-width="1300" data-pswp-height="120"
-                                                        aria-label="バナー案件1の1300×120画像を拡大">
-                                                        <span class="banner-gallery__preview">
-                                                            <img src="/images/works/banner_01_top.jpg" alt=""
-                                                                width="1300" height="120" loading="lazy" />
-                                                        </span>
+                                                        <a class="banner-gallery__item"
+                                                            href="%BASE_URL%images/works/banner_01_top.jpg"
+                                                            data-pswp-width="1300" data-pswp-height="120"
+                                                            aria-label="バナー案件1の1300×120画像を拡大">
+                                                            <span class="banner-gallery__preview">
+                                                                <img src="/images/works/banner_01_top.jpg" alt=""
+                                                                    width="1300" height="120" loading="lazy" />
+                                                            </span>
 
-                                                        <span class="banner-gallery__size">
-                                                            1300 × 120
-                                                            <span aria-hidden="true">↗</span>
-                                                        </span>
-                                                    </a>
+                                                            <span class="banner-gallery__size">
+                                                                1300 × 120
+                                                                <span aria-hidden="true">↗</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div class="project__body">
-                                            <h3 class="project__title">防災・台風対策特集</h3>
+                                            <div class="project__body">
+                                                <h3 class="project__title">防災・台風対策特集</h3>
 
-                                            <p class="project__intro">
-                                                BtoBの卸向けECサイト内の特集で使用、トップページや各種SNSなどの媒体で広告として使用。
-                                            </p>
-
-                                            <dl class="project__details">
-                                                <div>
-                                                    <dt>目的・課題</dt>
-                                                    <dd>商品内容の更新もある為、実際の商品画像は使わない形での制作。</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>担当範囲</dt>
-                                                    <dd>デザイン・各掲載サイズへの展開。</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>工夫した点</dt>
-                                                    <dd>
-                                                        世間的に災害が騒がれていた時期でもあった為、訴求力の高いカラーを使用して広告掲載した際に目立つよう意識しました。
-                                                    </dd>
-                                                </div>
-                                            </dl>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <article class="project project--banner">
-
-                                        <div class="banner-gallery">
-                                            <!-- メインサイズ -->
-                                            <a class="project__zoom banner-gallery__main"
-                                                href="%BASE_URL%images/works/banner_02.jpg" data-pswp-width="750"
-                                                data-pswp-height="394" aria-label="バナー案件1の750×394画像を拡大">
-                                                <img src="/images/works/banner_02.jpg" alt="バナー案件2のメインデザイン" width="750"
-                                                    height="394" loading="lazy" />
-
-                                                <span class="project__zoom-label" aria-hidden="true">
-                                                    拡大する ↗
-                                                </span>
-                                            </a>
-
-                                            <!-- サイズ展開 -->
-                                            <div class="banner-gallery__variations">
-                                                <p class="banner-gallery__heading">
-                                                    サイズ展開
-                                                    <span>クリックで拡大</span>
+                                                <p class="project__intro">
+                                                    BtoBの卸向けECサイト内の特集で使用、トップページや各種SNSなどの媒体で広告として使用。
                                                 </p>
 
-                                                <div class="banner-gallery__list">
-                                                    <a class="banner-gallery__item"
-                                                        href="%BASE_URL%images/works/banner_02_line.jpg"
-                                                        data-pswp-width="1040" data-pswp-height="1040"
-                                                        aria-label="バナー案件2の1040x1040画像を拡大">
-                                                        <span class="banner-gallery__preview">
-                                                            <img src="/images/works/banner_02_line.jpg" alt=""
-                                                                width="1040" height="1040" loading="lazy" />
-                                                        </span>
+                                                <dl class="project__details">
+                                                    <div>
+                                                        <dt>目的・課題</dt>
+                                                        <dd>商品内容の更新もある為、実際の商品画像は使わない形での制作。</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>担当範囲</dt>
+                                                        <dd>デザイン・各掲載サイズへの展開。</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>工夫した点</dt>
+                                                        <dd>
+                                                            世間的に災害が騒がれていた時期でもあった為、訴求力の高いカラーを使用して広告掲載した際に目立つよう意識しました。
+                                                        </dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </article>
+                                    </div>
 
-                                                        <span class="banner-gallery__size">
-                                                            1040 × 1040
-                                                            <span aria-hidden="true">↗</span>
-                                                        </span>
-                                                    </a>
+                                    <div class="swiper-slide">
+                                        <article class="project project--banner">
 
-                                                    <a class="banner-gallery__item"
-                                                        href="%BASE_URL%images/works/banner_02_mini.jpg"
-                                                        data-pswp-width="600" data-pswp-height="166"
-                                                        aria-label="バナー案件2の600×166画像を拡大">
-                                                        <span class="banner-gallery__preview">
-                                                            <img src="/images/works/banner_02_mini.jpg" alt=""
-                                                                width="600" height="166" loading="lazy" />
-                                                        </span>
+                                            <div class="banner-gallery">
+                                                <!-- メインサイズ -->
+                                                <a class="project__zoom banner-gallery__main"
+                                                    href="%BASE_URL%images/works/banner_02.jpg" data-pswp-width="750"
+                                                    data-pswp-height="394" aria-label="バナー案件1の750×394画像を拡大">
+                                                    <img src="/images/works/banner_02.jpg" alt="バナー案件2のメインデザイン"
+                                                        width="750" height="394" loading="lazy" />
 
-                                                        <span class="banner-gallery__size">
-                                                            600 × 166
-                                                            <span aria-hidden="true">↗</span>
-                                                        </span>
-                                                    </a>
+                                                    <span class="project__zoom-label" aria-hidden="true">
+                                                        拡大する ↗
+                                                    </span>
+                                                </a>
 
-                                                    <a class="banner-gallery__item"
-                                                        href="%BASE_URL%images/works/banner_02_top.jpg"
-                                                        data-pswp-width="1300" data-pswp-height="120"
-                                                        aria-label="バナー案件1の1300×120画像を拡大">
-                                                        <span class="banner-gallery__preview">
-                                                            <img src="/images/works/banner_02_top.jpg" alt=""
-                                                                width="1300" height="120" loading="lazy" />
-                                                        </span>
+                                                <!-- サイズ展開 -->
+                                                <div class="banner-gallery__variations">
+                                                    <p class="banner-gallery__heading">
+                                                        サイズ展開
+                                                        <span>クリックで拡大</span>
+                                                    </p>
 
-                                                        <span class="banner-gallery__size">
-                                                            1300 × 120
-                                                            <span aria-hidden="true">↗</span>
-                                                        </span>
-                                                    </a>
+                                                    <div class="banner-gallery__list">
+                                                        <a class="banner-gallery__item"
+                                                            href="%BASE_URL%images/works/banner_02_line.jpg"
+                                                            data-pswp-width="1040" data-pswp-height="1040"
+                                                            aria-label="バナー案件2の1040x1040画像を拡大">
+                                                            <span class="banner-gallery__preview">
+                                                                <img src="/images/works/banner_02_line.jpg" alt=""
+                                                                    width="1040" height="1040" loading="lazy" />
+                                                            </span>
+
+                                                            <span class="banner-gallery__size">
+                                                                1040 × 1040
+                                                                <span aria-hidden="true">↗</span>
+                                                            </span>
+                                                        </a>
+
+                                                        <a class="banner-gallery__item"
+                                                            href="%BASE_URL%images/works/banner_02_mini.jpg"
+                                                            data-pswp-width="600" data-pswp-height="166"
+                                                            aria-label="バナー案件2の600×166画像を拡大">
+                                                            <span class="banner-gallery__preview">
+                                                                <img src="/images/works/banner_02_mini.jpg" alt=""
+                                                                    width="600" height="166" loading="lazy" />
+                                                            </span>
+
+                                                            <span class="banner-gallery__size">
+                                                                600 × 166
+                                                                <span aria-hidden="true">↗</span>
+                                                            </span>
+                                                        </a>
+
+                                                        <a class="banner-gallery__item"
+                                                            href="%BASE_URL%images/works/banner_02_top.jpg"
+                                                            data-pswp-width="1300" data-pswp-height="120"
+                                                            aria-label="バナー案件1の1300×120画像を拡大">
+                                                            <span class="banner-gallery__preview">
+                                                                <img src="/images/works/banner_02_top.jpg" alt=""
+                                                                    width="1300" height="120" loading="lazy" />
+                                                            </span>
+
+                                                            <span class="banner-gallery__size">
+                                                                1300 × 120
+                                                                <span aria-hidden="true">↗</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div class="project__body">
-                                            <h3 class="project__title">年末年始・お正月準備特集</h3>
+                                            <div class="project__body">
+                                                <h3 class="project__title">年末年始・お正月準備特集</h3>
 
-                                            <p class="project__intro">
-                                                BtoBの卸向けECサイト内の特集で使用、トップページや各種SNSなどの媒体で広告として使用。
-                                            </p>
-
-                                            <dl class="project__details">
-                                                <div>
-                                                    <dt>目的・課題</dt>
-                                                    <dd>商品内容の更新もある為、実際の商品画像は使わない形での制作。</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>担当範囲</dt>
-                                                    <dd>デザイン・各掲載サイズへの展開。</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>工夫した点</dt>
-                                                    <dd>
-                                                        年始年末のおめでたい雰囲気とポップな雰囲気を押し出して制作しました。
-                                                    </dd>
-                                                </div>
-                                            </dl>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <article class="project project--banner">
-
-                                        <div class="banner-gallery">
-                                            <!-- メインサイズ -->
-                                            <a class="project__zoom banner-gallery__main"
-                                                href="%BASE_URL%images/works/banner_03.jpg" data-pswp-width="750"
-                                                data-pswp-height="394" aria-label="バナー案件1の750×394画像を拡大">
-                                                <img src="/images/works/banner_03.jpg" alt="バナー案件2のメインデザイン" width="750"
-                                                    height="394" loading="lazy" />
-
-                                                <span class="project__zoom-label" aria-hidden="true">
-                                                    拡大する ↗
-                                                </span>
-                                            </a>
-
-                                            <!-- サイズ展開 -->
-                                            <div class="banner-gallery__variations">
-                                                <p class="banner-gallery__heading">
-                                                    サイズ展開
-                                                    <span>クリックで拡大</span>
+                                                <p class="project__intro">
+                                                    BtoBの卸向けECサイト内の特集で使用、トップページや各種SNSなどの媒体で広告として使用。
                                                 </p>
 
-                                                <div class="banner-gallery__list">
-                                                    <a class="banner-gallery__item"
-                                                        href="%BASE_URL%images/works/banner_03_line.jpg"
-                                                        data-pswp-width="1040" data-pswp-height="1040"
-                                                        aria-label="バナー案件2の1040x1040画像を拡大">
-                                                        <span class="banner-gallery__preview">
-                                                            <img src="/images/works/banner_03_line.jpg" alt=""
-                                                                width="1040" height="1040" loading="lazy" />
-                                                        </span>
+                                                <dl class="project__details">
+                                                    <div>
+                                                        <dt>目的・課題</dt>
+                                                        <dd>商品内容の更新もある為、実際の商品画像は使わない形での制作。</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>担当範囲</dt>
+                                                        <dd>デザイン・各掲載サイズへの展開。</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>工夫した点</dt>
+                                                        <dd>
+                                                            年始年末のおめでたい雰囲気とポップな雰囲気を押し出して制作しました。
+                                                        </dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </article>
+                                    </div>
 
-                                                        <span class="banner-gallery__size">
-                                                            1040 × 1040
-                                                            <span aria-hidden="true">↗</span>
-                                                        </span>
-                                                    </a>
+                                    <div class="swiper-slide">
+                                        <article class="project project--banner">
 
-                                                    <a class="banner-gallery__item"
-                                                        href="%BASE_URL%images/works/banner_03_title.jpg"
-                                                        data-pswp-width="1000" data-pswp-height="300"
-                                                        aria-label="バナー案件2の1000×300画像を拡大">
-                                                        <span class="banner-gallery__preview">
-                                                            <img src="/images/works/banner_03_title.jpg" alt=""
-                                                                width="1000" height="300" loading="lazy" />
-                                                        </span>
+                                            <div class="banner-gallery">
+                                                <!-- メインサイズ -->
+                                                <a class="project__zoom banner-gallery__main"
+                                                    href="%BASE_URL%images/works/banner_03.jpg" data-pswp-width="750"
+                                                    data-pswp-height="394" aria-label="バナー案件1の750×394画像を拡大">
+                                                    <img src="/images/works/banner_03.jpg" alt="バナー案件2のメインデザイン"
+                                                        width="750" height="394" loading="lazy" />
 
-                                                        <span class="banner-gallery__size">
-                                                            1000 × 300
-                                                            <span aria-hidden="true">↗</span>
-                                                        </span>
-                                                    </a>
+                                                    <span class="project__zoom-label" aria-hidden="true">
+                                                        拡大する ↗
+                                                    </span>
+                                                </a>
 
-                                                    <a class="banner-gallery__item"
-                                                        href="%BASE_URL%images/works/banner_03_1080.png"
-                                                        data-pswp-width="1080" data-pswp-height="1920"
-                                                        aria-label="バナー案件1の1080×1920画像を拡大">
-                                                        <span class="banner-gallery__preview">
-                                                            <img src="/images/works/banner_03_1080.png" alt=""
-                                                                width="1080" height="1920" loading="lazy" />
-                                                        </span>
+                                                <!-- サイズ展開 -->
+                                                <div class="banner-gallery__variations">
+                                                    <p class="banner-gallery__heading">
+                                                        サイズ展開
+                                                        <span>クリックで拡大</span>
+                                                    </p>
 
-                                                        <span class="banner-gallery__size">
-                                                            1080 × 1920
-                                                            <span aria-hidden="true">↗</span>
-                                                        </span>
-                                                    </a>
+                                                    <div class="banner-gallery__list">
+                                                        <a class="banner-gallery__item"
+                                                            href="%BASE_URL%images/works/banner_03_line.jpg"
+                                                            data-pswp-width="1040" data-pswp-height="1040"
+                                                            aria-label="バナー案件2の1040x1040画像を拡大">
+                                                            <span class="banner-gallery__preview">
+                                                                <img src="/images/works/banner_03_line.jpg" alt=""
+                                                                    width="1040" height="1040" loading="lazy" />
+                                                            </span>
+
+                                                            <span class="banner-gallery__size">
+                                                                1040 × 1040
+                                                                <span aria-hidden="true">↗</span>
+                                                            </span>
+                                                        </a>
+
+                                                        <a class="banner-gallery__item"
+                                                            href="%BASE_URL%images/works/banner_03_title.jpg"
+                                                            data-pswp-width="1000" data-pswp-height="300"
+                                                            aria-label="バナー案件2の1000×300画像を拡大">
+                                                            <span class="banner-gallery__preview">
+                                                                <img src="/images/works/banner_03_title.jpg" alt=""
+                                                                    width="1000" height="300" loading="lazy" />
+                                                            </span>
+
+                                                            <span class="banner-gallery__size">
+                                                                1000 × 300
+                                                                <span aria-hidden="true">↗</span>
+                                                            </span>
+                                                        </a>
+
+                                                        <a class="banner-gallery__item"
+                                                            href="%BASE_URL%images/works/banner_03_1080.png"
+                                                            data-pswp-width="1080" data-pswp-height="1920"
+                                                            aria-label="バナー案件1の1080×1920画像を拡大">
+                                                            <span class="banner-gallery__preview">
+                                                                <img src="/images/works/banner_03_1080.png" alt=""
+                                                                    width="1080" height="1920" loading="lazy" />
+                                                            </span>
+
+                                                            <span class="banner-gallery__size">
+                                                                1080 × 1920
+                                                                <span aria-hidden="true">↗</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div class="project__body">
-                                            <h3 class="project__title">夏のPICKUPSALE</h3>
+                                            <div class="project__body">
+                                                <h3 class="project__title">夏のPICKUPSALE</h3>
 
-                                            <p class="project__intro">
-                                                BtoBの卸向けECサイト内の特集で使用、トップページや各種SNSなどの媒体で広告として使用。
-                                            </p>
+                                                <p class="project__intro">
+                                                    BtoBの卸向けECサイト内の特集で使用、トップページや各種SNSなどの媒体で広告として使用。
+                                                </p>
 
-                                            <dl class="project__details">
-                                                <div>
-                                                    <dt>目的・課題</dt>
-                                                    <dd>大々的に告知した複数サプライヤー合同の特集にて使用、実際の掲載商品を使用したバナー。</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>担当範囲</dt>
-                                                    <dd>デザイン・各掲載サイズへの展開。</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>工夫した点</dt>
-                                                    <dd>
-                                                        「夏」の清涼感を前に出しつつ、商品が埋もれないようにラインナップして制作しました。
-                                                    </dd>
-                                                </div>
-                                            </dl>
-                                        </div>
-                                    </article>
+                                                <dl class="project__details">
+                                                    <div>
+                                                        <dt>目的・課題</dt>
+                                                        <dd>大々的に告知した複数サプライヤー合同の特集にて使用、実際の掲載商品を使用したバナー。</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>担当範囲</dt>
+                                                        <dd>デザイン・各掲載サイズへの展開。</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>工夫した点</dt>
+                                                        <dd>
+                                                            「夏」の清涼感を前に出しつつ、商品が埋もれないようにラインナップして制作しました。
+                                                        </dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </article>
+                                    </div>
+
                                 </div>
-
                             </div>
-                        </div>
 
-                        <div class="works-carousel__controls">
-                            <button class="works-carousel__prev" type="button" aria-label="前の作品">
-                                ←
-                            </button>
+                            <div class="works-carousel__controls">
+                                <button class="works-carousel__prev" type="button" aria-label="前の作品">
+                                    ←
+                                </button>
 
-                            <div class="works-carousel__pagination"></div>
+                                <div class="works-carousel__pagination"></div>
 
-                            <button class="works-carousel__next" type="button" aria-label="次の作品">
-                                →
-                            </button>
+                                <button class="works-carousel__next" type="button" aria-label="次の作品">
+                                    →
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -586,227 +606,229 @@
                 <div class="works__panel" id="works-poster" role="tabpanel" aria-labelledby="tab-poster" tabindex="0"
                     hidden>
                     <div class="works-carousel">
-                        <div class="swiper works-slider" aria-label="ポスターの制作事例">
-                            <div class="swiper-wrapper">
+                        <div class="works-carousel__viewport">
+                            <div class="swiper works-slider" aria-label="ポスターの制作事例">
+                                <div class="swiper-wrapper">
 
-                                <div class="swiper-slide">
-                                    <article class="project project--poster">
-                                        <a class="project__zoom poster-preview"
-                                            href="%BASE_URL%images/works/poster_01.png" data-pswp-width="2480"
-                                            data-pswp-height="3508" aria-label="ポスター1の全体画像を拡大">
-                                            <img src="/images/works/poster_01.png" alt="STREETFIGHTER VRCイベント交流戦"
-                                                width="2480" height="3508" loading="lazy" />
+                                    <div class="swiper-slide">
+                                        <article class="project project--poster">
+                                            <a class="project__zoom poster-preview"
+                                                href="%BASE_URL%images/works/poster_01.png" data-pswp-width="2480"
+                                                data-pswp-height="3508" aria-label="ポスター1の全体画像を拡大">
+                                                <img src="/images/works/poster_01.png" alt="STREETFIGHTER VRCイベント交流戦"
+                                                    width="2480" height="3508" loading="lazy" />
 
-                                            <span class="project__zoom-label" aria-hidden="true">
-                                                拡大する ↗
-                                            </span>
-                                        </a>
+                                                <span class="project__zoom-label" aria-hidden="true">
+                                                    拡大する ↗
+                                                </span>
+                                            </a>
 
-                                        <div class="project__body">
-                                            <h3 class="project__title">STREETFIGHTER VRCイベント交流戦</h3>
+                                            <div class="project__body">
+                                                <h3 class="project__title">STREETFIGHTER VRCイベント交流戦</h3>
 
-                                            <p class="project__intro">
-                                                VRChatのコミュニティ内で開催されたSTREETFIGHTERの対抗戦の宣伝ポスター
-                                            </p>
+                                                <p class="project__intro">
+                                                    VRChatのコミュニティ内で開催されたSTREETFIGHTERの対抗戦の宣伝ポスター
+                                                </p>
 
-                                            <ul class="project__tags" aria-label="担当業務">
-                                                <li>グラフィックデザイン</li>
-                                                <li>ポスター</li>
-                                            </ul>
+                                                <ul class="project__tags" aria-label="担当業務">
+                                                    <li>グラフィックデザイン</li>
+                                                    <li>ポスター</li>
+                                                </ul>
 
-                                            <dl class="project__details">
-                                                <div>
-                                                    <dt>目的・課題</dt>
-                                                    <dd>参加者募集でなく、配信の宣伝の役割が強かった為「対ありでした」のパロディを交えつつ制作。</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>工夫した点</dt>
-                                                    <dd>
-                                                        「伝えたい情報」を中心にしつつ、「VRCらしさ」「STREETFIGHTERらしさ」といったイベントを構成する要素をうまく混ぜつつもごちゃごちゃしないようまとめました。
-                                                    </dd>
-                                                </div>
-                                            </dl>
-                                        </div>
-                                    </article>
+                                                <dl class="project__details">
+                                                    <div>
+                                                        <dt>目的・課題</dt>
+                                                        <dd>参加者募集でなく、配信の宣伝の役割が強かった為「対ありでした」のパロディを交えつつ制作。</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>工夫した点</dt>
+                                                        <dd>
+                                                            「伝えたい情報」を中心にしつつ、「VRCらしさ」「STREETFIGHTERらしさ」といったイベントを構成する要素をうまく混ぜつつもごちゃごちゃしないようまとめました。
+                                                        </dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <article class="project project--poster">
+                                            <a class="project__zoom poster-preview"
+                                                href="%BASE_URL%images/works/poster_02.png" data-pswp-width="2480"
+                                                data-pswp-height="3508" aria-label="ポスター1の全体画像を拡大">
+                                                <img src="/images/works/poster_02.png" alt="ポスター1のデザイン" width="2480"
+                                                    height="3508" loading="lazy" />
+
+                                                <span class="project__zoom-label" aria-hidden="true">
+                                                    拡大する ↗
+                                                </span>
+                                            </a>
+
+                                            <div class="project__body">
+                                                <h3 class="project__title">MozBarn 特別合同イベント</h3>
+
+                                                <p class="project__intro">
+                                                    VRChatの5イベント合同開催の際に使用した宣伝ポスター
+                                                </p>
+
+                                                <ul class="project__tags" aria-label="担当業務">
+                                                    <li>グラフィックデザイン</li>
+                                                    <li>ポスター</li>
+                                                </ul>
+
+                                                <dl class="project__details">
+                                                    <div>
+                                                        <dt>目的・課題</dt>
+                                                        <dd>「どんなイベントが参加するか」「どういうイベントか」「いつやるか」を抑えた広報用のポスターを制作。</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>工夫した点</dt>
+                                                        <dd>
+                                                            5イベント合同ではあるが、それぞれのイベントの情報を盛りすぎても無駄に視線が散らかるので「わかる」程度にまとめてイベントに必要な情報を強調して全体の雰囲気をまとめました。
+                                                        </dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <article class="project project--poster">
+                                            <a class="project__zoom poster-preview"
+                                                href="%BASE_URL%images/works/poster_03.png" data-pswp-width="2480"
+                                                data-pswp-height="3508" aria-label="ポスター1の全体画像を拡大">
+                                                <img src="/images/works/poster_03.png" alt="ポスター1のデザイン" width="2480"
+                                                    height="3508" loading="lazy" />
+
+                                                <span class="project__zoom-label" aria-hidden="true">
+                                                    拡大する ↗
+                                                </span>
+                                            </a>
+
+                                            <div class="project__body">
+                                                <h3 class="project__title">はきだめプラットフォーム</h3>
+
+                                                <p class="project__intro">
+                                                    VRChatのイベントの宣伝ポスター
+                                                </p>
+
+                                                <ul class="project__tags" aria-label="担当業務">
+                                                    <li>グラフィックデザイン</li>
+                                                    <li>ポスター</li>
+                                                </ul>
+
+                                                <dl class="project__details">
+                                                    <div>
+                                                        <dt>目的・課題</dt>
+                                                        <dd>「スタイリッシュバー」というコンセプトの元、ワールドとイベントの雰囲気に合わせた広報用のポスターを制作。</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>工夫した点</dt>
+                                                        <dd>
+                                                            ワールドやメインキャストが白と黒を基調としていたこともあり、その雰囲気をくみ取ってあえてVRChatの要素を削ったデザインにしました。
+                                                        </dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <article class="project project--poster">
+                                            <a class="project__zoom poster-preview"
+                                                href="%BASE_URL%images/works/poster_04.png" data-pswp-width="1448"
+                                                data-pswp-height="2048" aria-label="ポスター1の全体画像を拡大">
+                                                <img src="/images/works/poster_04.png" alt="ポスター1のデザイン" width="2480"
+                                                    height="3508" loading="lazy" />
+
+                                                <span class="project__zoom-label" aria-hidden="true">
+                                                    拡大する ↗
+                                                </span>
+                                            </a>
+
+                                            <div class="project__body">
+                                                <h3 class="project__title">第3回 我々のバレー 我バレー</h3>
+
+                                                <p class="project__intro">
+                                                    VRChatのバレーボール大会の宣伝ポスター
+                                                </p>
+
+                                                <ul class="project__tags" aria-label="担当業務">
+                                                    <li>グラフィックデザイン</li>
+                                                    <li>ポスター</li>
+                                                </ul>
+
+                                                <dl class="project__details">
+                                                    <div>
+                                                        <dt>目的・課題</dt>
+                                                        <dd>「イベント対抗戦であること」を中心にバレーボール大会として必要な情報を伝え、参加者を募るポスターを制作。</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>工夫した点</dt>
+                                                        <dd>
+                                                            カラーとしてバレーボールに使われている色を選択し、周りをビビットなイエローの枠を使うことで目を引くデザインにし、情報はぎゅっとまとめつつ目を引くメインビジュアルを強調しました。
+                                                        </dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <article class="project project--poster">
+                                            <a class="project__zoom poster-preview"
+                                                href="%BASE_URL%images/works/poster_05.png" data-pswp-width="1024"
+                                                data-pswp-height="3507" aria-label="ポスター1の全体画像を拡大">
+                                                <img src="/images/works/poster_05.png" alt="ポスター1のデザイン" width="2480"
+                                                    height="3508" loading="lazy" />
+
+                                                <span class="project__zoom-label" aria-hidden="true">
+                                                    拡大する ↗
+                                                </span>
+                                            </a>
+
+                                            <div class="project__body">
+                                                <h3 class="project__title">ろりっこ喫茶　ぷぷりえ</h3>
+
+                                                <p class="project__intro">
+                                                    VRChatのイベントの宣伝ポスター
+                                                </p>
+
+                                                <ul class="project__tags" aria-label="担当業務">
+                                                    <li>グラフィックデザイン</li>
+                                                    <li>ポスター</li>
+                                                </ul>
+
+                                                <dl class="project__details">
+                                                    <div>
+                                                        <dt>目的・課題</dt>
+                                                        <dd>イベントの雰囲気を伝えることを優先したデザインで制作。</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dt>工夫した点</dt>
+                                                        <dd>
+                                                            朗らかでにぎやかな雰囲気のイベントなのでロゴに使われているパステルカラーを中心に、クレヨンで描いたようなフォントなどで「子供らしさ」を出してロールプレイイベントとしての雰囲気を表現しました。
+                                                        </dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </article>
+                                    </div>
+
                                 </div>
-
-                                <div class="swiper-slide">
-                                    <article class="project project--poster">
-                                        <a class="project__zoom poster-preview"
-                                            href="%BASE_URL%images/works/poster_02.png" data-pswp-width="2480"
-                                            data-pswp-height="3508" aria-label="ポスター1の全体画像を拡大">
-                                            <img src="/images/works/poster_02.png" alt="ポスター1のデザイン" width="2480"
-                                                height="3508" loading="lazy" />
-
-                                            <span class="project__zoom-label" aria-hidden="true">
-                                                拡大する ↗
-                                            </span>
-                                        </a>
-
-                                        <div class="project__body">
-                                            <h3 class="project__title">MozBarn 特別合同イベント</h3>
-
-                                            <p class="project__intro">
-                                                VRChatの5イベント合同開催の際に使用した宣伝ポスター
-                                            </p>
-
-                                            <ul class="project__tags" aria-label="担当業務">
-                                                <li>グラフィックデザイン</li>
-                                                <li>ポスター</li>
-                                            </ul>
-
-                                            <dl class="project__details">
-                                                <div>
-                                                    <dt>目的・課題</dt>
-                                                    <dd>「どんなイベントが参加するか」「どういうイベントか」「いつやるか」を抑えた広報用のポスターを制作。</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>工夫した点</dt>
-                                                    <dd>
-                                                        5イベント合同ではあるが、それぞれのイベントの情報を盛りすぎても無駄に視線が散らかるので「わかる」程度にまとめてイベントに必要な情報を強調して全体の雰囲気をまとめました。
-                                                    </dd>
-                                                </div>
-                                            </dl>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <article class="project project--poster">
-                                        <a class="project__zoom poster-preview"
-                                            href="%BASE_URL%images/works/poster_03.png" data-pswp-width="2480"
-                                            data-pswp-height="3508" aria-label="ポスター1の全体画像を拡大">
-                                            <img src="/images/works/poster_03.png" alt="ポスター1のデザイン" width="2480"
-                                                height="3508" loading="lazy" />
-
-                                            <span class="project__zoom-label" aria-hidden="true">
-                                                拡大する ↗
-                                            </span>
-                                        </a>
-
-                                        <div class="project__body">
-                                            <h3 class="project__title">はきだめプラットフォーム</h3>
-
-                                            <p class="project__intro">
-                                                VRChatのイベントの宣伝ポスター
-                                            </p>
-
-                                            <ul class="project__tags" aria-label="担当業務">
-                                                <li>グラフィックデザイン</li>
-                                                <li>ポスター</li>
-                                            </ul>
-
-                                            <dl class="project__details">
-                                                <div>
-                                                    <dt>目的・課題</dt>
-                                                    <dd>「スタイリッシュバー」というコンセプトの元、ワールドとイベントの雰囲気に合わせた広報用のポスターを制作。</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>工夫した点</dt>
-                                                    <dd>
-                                                        ワールドやメインキャストが白と黒を基調としていたこともあり、その雰囲気をくみ取ってあえてVRChatの要素を削ったデザインにしました。
-                                                    </dd>
-                                                </div>
-                                            </dl>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <article class="project project--poster">
-                                        <a class="project__zoom poster-preview"
-                                            href="%BASE_URL%images/works/poster_04.png" data-pswp-width="2480"
-                                            data-pswp-height="3508" aria-label="ポスター1の全体画像を拡大">
-                                            <img src="/images/works/poster_04.png" alt="ポスター1のデザイン" width="2480"
-                                                height="3508" loading="lazy" />
-
-                                            <span class="project__zoom-label" aria-hidden="true">
-                                                拡大する ↗
-                                            </span>
-                                        </a>
-
-                                        <div class="project__body">
-                                            <h3 class="project__title">第3回 我々のバレー 我バレー</h3>
-
-                                            <p class="project__intro">
-                                                VRChatのバレーボール大会の宣伝ポスター
-                                            </p>
-
-                                            <ul class="project__tags" aria-label="担当業務">
-                                                <li>グラフィックデザイン</li>
-                                                <li>ポスター</li>
-                                            </ul>
-
-                                            <dl class="project__details">
-                                                <div>
-                                                    <dt>目的・課題</dt>
-                                                    <dd>「イベント対抗戦であること」を中心にバレーボール大会として必要な情報を伝え、参加者を募るポスターを制作。</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>工夫した点</dt>
-                                                    <dd>
-                                                        カラーとしてバレーボールに使われている色を選択し、周りをビビットなイエローの枠を使うことで目を引くデザインにし、情報はぎゅっとまとめつつ目を引くメインビジュアルを強調しました。
-                                                    </dd>
-                                                </div>
-                                            </dl>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <article class="project project--poster">
-                                        <a class="project__zoom poster-preview"
-                                            href="%BASE_URL%images/works/poster_05.png" data-pswp-width="2480"
-                                            data-pswp-height="3508" aria-label="ポスター1の全体画像を拡大">
-                                            <img src="/images/works/poster_05.png" alt="ポスター1のデザイン" width="2480"
-                                                height="3508" loading="lazy" />
-
-                                            <span class="project__zoom-label" aria-hidden="true">
-                                                拡大する ↗
-                                            </span>
-                                        </a>
-
-                                        <div class="project__body">
-                                            <h3 class="project__title">ろりっこ喫茶　ぷぷりえ</h3>
-
-                                            <p class="project__intro">
-                                                VRChatのイベントの宣伝ポスター
-                                            </p>
-
-                                            <ul class="project__tags" aria-label="担当業務">
-                                                <li>グラフィックデザイン</li>
-                                                <li>ポスター</li>
-                                            </ul>
-
-                                            <dl class="project__details">
-                                                <div>
-                                                    <dt>目的・課題</dt>
-                                                    <dd>イベントの雰囲気を伝えることを優先したデザインで制作。</dd>
-                                                </div>
-                                                <div>
-                                                    <dt>工夫した点</dt>
-                                                    <dd>
-                                                        朗らかでにぎやかな雰囲気のイベントなのでロゴに使われているパステルカラーを中心に、クレヨンで描いたようなフォントなどで「子供らしさ」を出してロールプレイイベントとしての雰囲気を表現しました。
-                                                    </dd>
-                                                </div>
-                                            </dl>
-                                        </div>
-                                    </article>
-                                </div>
-
                             </div>
-                        </div>
 
-                        <div class="works-carousel__controls">
-                            <button class="works-carousel__prev" type="button" aria-label="前の作品">
-                                ←
-                            </button>
+                            <div class="works-carousel__controls">
+                                <button class="works-carousel__prev" type="button" aria-label="前の作品">
+                                    ←
+                                </button>
 
-                            <div class="works-carousel__pagination"></div>
+                                <div class="works-carousel__pagination"></div>
 
-                            <button class="works-carousel__next" type="button" aria-label="次の作品">
-                                →
-                            </button>
+                                <button class="works-carousel__next" type="button" aria-label="次の作品">
+                                    →
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -910,25 +932,21 @@
                 </section>
 
                 <div class="about__source">
-  <div>
-    <h3 class="about__source-title">このサイトについて</h3>
-    <p class="about__source-text">
-      HTML・SCSS・JavaScript・Viteで制作しています。
-      ソースコードはGitHubで公開しています。
-    </p>
-  </div>
+                    <div>
+                        <h3 class="about__source-title">このサイトについて</h3>
+                        <p class="about__source-text">
+                            HTML・SCSS・JavaScript・Viteで制作しています。
+                            ソースコードはGitHubで公開しています。
+                        </p>
+                    </div>
 
-  <a
-    class="about__github"
-    href="https://github.com/dorago-kei-ai/portfolio"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    GitHubでコードを見る
-    <span aria-hidden="true">↗</span>
-    <span class="about__sr-only">（新しいタブで開きます）</span>
-  </a>
-</div>
+                    <a class="about__github" href="https://github.com/dorago-kei-ai/portfolio" target="_blank"
+                        rel="noopener noreferrer">
+                        GitHubでコードを見る
+                        <span aria-hidden="true">↗</span>
+                        <span class="about__sr-only">（新しいタブで開きます）</span>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
