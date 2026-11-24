@@ -1,0 +1,48 @@
+ index.html                              | 934 [32m+++++++++++++++++++++++++++++++[m[31m-[m
+ package-lock.json                       |  39 [32m++[m
+ package.json                            |   5 [32m+[m
+ public/images/skills/css.svg            |   1 [32m+[m
+ public/images/skills/figma.svg          |   1 [32m+[m
+ public/images/skills/html.svg           |   1 [32m+[m
+ public/images/skills/illustrator.svg    |   1 [32m+[m
+ public/images/skills/indesign.svg       |  16 [32m+[m
+ public/images/skills/javascript.svg     |   1 [32m+[m
+ public/images/skills/photoshop.svg      |  37 [32m++[m
+ public/images/skills/sass.svg           |   1 [32m+[m
+ public/images/works/banner_01.jpg       | Bin [31m0[m -> [32m193498[m bytes
+ public/images/works/banner_01_line.jpg  | Bin [31m0[m -> [32m417421[m bytes
+ public/images/works/banner_01_mini.jpg  | Bin [31m0[m -> [32m69862[m bytes
+ public/images/works/banner_01_top.jpg   | Bin [31m0[m -> [32m101606[m bytes
+ public/images/works/banner_02.jpg       | Bin [31m0[m -> [32m205715[m bytes
+ public/images/works/banner_02_line.jpg  | Bin [31m0[m -> [32m523781[m bytes
+ public/images/works/banner_02_mini.jpg  | Bin [31m0[m -> [32m80330[m bytes
+ public/images/works/banner_02_top.jpg   | Bin [31m0[m -> [32m115197[m bytes
+ public/images/works/banner_03.jpg       | Bin [31m0[m -> [32m150029[m bytes
+ public/images/works/banner_03_1080.png  | Bin [31m0[m -> [32m746656[m bytes
+ public/images/works/banner_03_line.jpg  | Bin [31m0[m -> [32m426667[m bytes
+ public/images/works/banner_03_title.jpg | Bin [31m0[m -> [32m140914[m bytes
+ public/images/works/poster_01.png       | Bin [31m0[m -> [32m7721676[m bytes
+ public/images/works/poster_02.png       | Bin [31m0[m -> [32m5350364[m bytes
+ public/images/works/poster_03.png       | Bin [31m0[m -> [32m599741[m bytes
+ public/images/works/poster_04.png       | Bin [31m0[m -> [32m2400711[m bytes
+ public/images/works/poster_05.png       | Bin [31m0[m -> [32m609668[m bytes
+ public/images/works/web_01.png          | Bin [31m0[m -> [32m3634220[m bytes
+ public/images/works/web_01_full.png     | Bin [31m0[m -> [32m7423638[m bytes
+ public/images/works/web_02.png          | Bin [31m0[m -> [32m2207880[m bytes
+ public/images/works/web_02_full.png     | Bin [31m0[m -> [32m2614968[m bytes
+ public/images/works/web_03.png          | Bin [31m0[m -> [32m1590299[m bytes
+ public/images/works/web_03_full.png     | Bin [31m0[m -> [32m2234976[m bytes
+ src/assets/hero.png                     | Bin [31m13057[m -> [32m0[m bytes
+ src/assets/javascript.svg               |   1 [31m-[m
+ src/assets/vite.svg                     |   1 [31m-[m
+ src/js/lightbox.js                      |  31 [32m++[m
+ src/js/works-slider.js                  | 137 [32m+++++[m
+ src/js/works-tabs.js                    | 106 [32m++++[m
+ src/main.js                             |   4 [32m+[m
+ src/styles/_about.scss                  | 320 [32m+++++++++++[m
+ src/styles/_mv.scss                     | 347 [32m++++++++++++[m
+ src/styles/_reset.scss                  |  44 [32m++[m
+ src/styles/_variables.scss              |   4 [32m+[m
+ src/styles/_works.scss                  | 678 [32m+++++++++++++++++++++++[m
+ src/styles/main.scss                    |  18 [32m+[m[31m-[m
+ 47 files changed, 2715 insertions(+), 13 deletions(-)

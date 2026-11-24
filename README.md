@@ -1,59 +1,44 @@
-# Portfolio
+# Kei Igarashi Portfolio
 
-UI/UXデザイナーの転職活動用ポートフォリオ。
-現在は開発環境のみ構築しています。
+五十嵐啓以のポートフォリオサイトです。Webページ・LP、バナー、ポスターの制作物と、プロフィールをまとめています。
 
-## 使用技術
+[ポートフォリオを見る](https://dorago-kei-ai.github.io/portfolio/)
 
-- HTML
-- SCSS
-- JavaScript
-- Vite
-- GitHub Pages / GitHub Actions
+## サイトの構成
 
-## 必要な環境
+HTML・SCSS・JavaScriptを使い、Viteで開発しています。作品の切り替えにはSwiper、画像の拡大表示にはPhotoSwipe、タブの操作にはjQueryを使用しています。
 
-- Node.js 24 LTS
-- npm
-- Git
+- `index.html`：ページの内容、作品画像、説明文
+- `src/styles/`：メインビジュアル・制作物・Aboutなどのスタイル
+- `src/js/`：タブ、スライダー、画像拡大の処理
+- `src/main.js`：スタイルとJavaScriptの読み込み
+- `public/images/`：作品画像とスキルアイコン
 
-## 開発手順
+## ローカルで動かす
+
+Node.js 24を使用しています。リポジトリを取得し、フォルダー内で実行します。
 
 ```bash
+git clone https://github.com/dorago-kei-ai/portfolio.git
+cd portfolio
 npm ci
 npm run dev
 ```
 
-ターミナルに表示されたURLをブラウザで開きます。
+ターミナルに表示されるURLから確認できます。
+WindowsのPowerShellで `npm.ps1` の実行が制限される場合は、`npm` を `npm.cmd` に置き換えてください。
 
-## 本番ビルドと確認
+公開用のビルドを確認するときは、以下を実行します。
 
 ```bash
 npm run build
 npm run preview
 ```
 
-ビルド結果は `dist/` に出力されます。
+生成されたファイルは `dist/` に出力されます。
 
-## 主な編集ファイル
+## 更新・公開
 
-- `index.html`：ページの構造・メタ情報
-- `src/styles/main.scss`：スタイル
-- `src/main.js`：JavaScriptの処理
-- `public/`：加工せず配信する静的ファイル
+`main` にpushすると、GitHub Actionsでビルドし、GitHub Pagesに公開します。公開の設定は `.github/workflows/deploy.yml` にまとめています。
 
-## 公開方法
-
-`main` にpushすると、GitHub Actionsがビルドし、
-GitHub Pagesへ自動公開します。
-
-初回はリポジトリの Settings → Pages で、
-Sourceを GitHub Actions に設定してください。
-
-公開URL：
-https://dorago-kei-ai.github.io/portfolio/
-
-## パスについて
-
-GitHub Pages用に、Viteのbaseを `/portfolio/` に設定しています。
-リポジトリ名や公開先を変更する場合は `vite.config.js` を更新してください。
+GitHub Pagesの公開パスに合わせて、`vite.config.js` の `base` は `/portfolio/` に設定しています。リポジトリ名や公開先を変える場合は、この設定も変更してください。
